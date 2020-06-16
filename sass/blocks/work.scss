@@ -1,6 +1,7 @@
 $bg: #202020;
 $colorWorkText1: #464646;
 $colorWorkText2: #959595;
+$colorLineBefore: #2f2f2f;
 
 
 .work {
@@ -17,7 +18,8 @@ $colorWorkText2: #959595;
 }
 
 .work__element:first-child {
-  width: 270px;
+  max-width: 270px;
+  min-width: 170px;
 }
 
 .work__element--3 {
@@ -160,6 +162,16 @@ $colorWorkText2: #959595;
       z-index: 1;
     }
   }
+
+  &:first-child::before {
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: $colorLineBefore;
+    display: block;
+    position: absolute;
+  }
+
 }
 
 .work__element--active {
@@ -207,11 +219,12 @@ $colorWorkText2: #959595;
 }
 
 @media (max-width: 990px) {
+
   .work__description {
     font-size: 24px;
   }
   .work__textDescription {
-    font-size: 17px;
+    font-size: 14px;
   }
 }
 
