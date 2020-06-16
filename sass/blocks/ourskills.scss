@@ -1,0 +1,50 @@
+.ourskills {
+  background-color: $second;
+}
+
+.ourskills__wrap {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+}
+
+.ourskills__title {
+  font-family: 'Raleway';
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: $white;
+    position: absolute;
+    top: -30px;
+    left: 0;
+  }
+}
+
+.ourskills_text {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $white;
+}
+
+.ourskills__button {
+  @include button($primary);
+}
+
+.ourskills__left {
+margin-right: 115px;
+  flex-basis: 280px;
+}
+
+.ourskills__right {
+  flex-grow: 1;
+}

@@ -1,0 +1,92 @@
+$colorText: #464646;
+$colorTextLi: #959595;
+$colorButton: #8dc63f;
+
+.responsive__wrap {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: url("../img/bg-two.png") left bottom no-repeat;
+}
+
+.responsive__info {
+  max-width: 360px;
+  margin-left: auto;
+  position: relative;
+}
+
+.responsive__title {
+  font-family: 'Raleway';
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  margin: 20px 0;
+
+  &::before {
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: $colorLineBefore;
+    display: block;
+    position: absolute;
+    left: 0;
+    top:-30px;
+  }
+}
+
+.responsive__text {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $colorText;
+}
+
+.responsive__list {
+  list-style: none;
+  position: relative;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.responsive_item {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $colorTextLi;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 8px;
+    height: 2px;
+    background-color: $second;
+    position: absolute;
+    top: 50%;
+    left: -23px;
+    transform: translateY(-50%);
+  }
+
+  margin-bottom: 30px;
+}
+
+.responsive__button {
+  @include button($colorButton);
+  margin-top: 50px;
+}
+
+
+@media (max-width: 760px) {
+  .responsive__wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: none;
+  }
+
+  .responsive__info {
+    max-width: 100%;
+    margin-right: auto;
+  }
+}
